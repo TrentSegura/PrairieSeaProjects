@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  font-family: bio-sans,sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+html{
+  scroll-behavior: smooth
+
+}
+
+body p{
+  color: var(--gray-text) !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --black-text: #141414;
+  --gray-text: #303030;
+  /* --black-text: #4d4d4d; */
+  --yellow: #FFF247;
+  --dark-yellow: #FFA900;
+  --red: #EA080E;
+  --pink: #EC006F;
+  --dark-green: #233909;
+  --green: #419D3A;
+  --purple: #7F3F93;
+  --dark-blue: #292A59;
+  --light-blue: #C3CDD6;
+}
+
+::selection {
+  background: var(--yellow);
+}
+
+.lede-paragraph{
+    margin-bottom: 1.6187rem;
+    font-family: ibm-plex-mono,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 1.6187rem;
+}
+
+.lede{
+  text-transform: uppercase;
+}
+
+img{
+  display:block !important;
+}
+
+a{
+  color: var(--black-text);
+  text-decoration: underline;
+}
+
+.component-header{
+  background: #fff;
+}
+
+.range-slider{
+  width: calc(100vw - 30px);
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-top: 1px solid var(--black-text);
+  border-right: 1px solid var(--black-text);
+  position: fixed !important;
+  bottom: 0;
+  left: 30px;
+  pointer-events: all;
+  z-index: 3;
+}
+
+#myRange{
+  -webkit-appearance: none;
+  width: calc(100% - 3.2374rem);
+  margin: 0 1.6187rem;
+  height: 1px;
+  outline: none;
+  border-radius: 3px;
+  background-color: var(--gray-text);
+}
+
+#myRange::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  z-index: 3;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--gray-text);
+}
+
+@media screen and (max-width: 650px){
+  .range-slider{
+    display: none;
+  }
+}
